@@ -10,9 +10,6 @@ WORKDIR /home/user
 
 RUN mkdir -p lib/models
 
-#COPY lib/models/model-latest.joblib lib/models/
-#COPY lib/models/model-latest.md5 lib/models/
-#COPY lib/models/model-latest.sha1 lib/models/
 VOLUME /home/user/lib/models/
 
 COPY app app
