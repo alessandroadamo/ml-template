@@ -47,3 +47,10 @@ To run the contained is required to pass the volume containing the binary (*mode
 ```console
 foo@bar:~$ docker run --rm -i -t -p 5000:5000 -v /home/user/lib/models/:/home/user/lib/models/ ml-template
 ```
+
+If you want to pass a modified config file you have to execute the following line:
+
+```console
+foo@bar:~$ docker run --rm -i -t -p 5000:5000 -v /home/user/lib/models/:/home/user/lib/models/ -v config.ini:/home/user/config.ini ml-template
+```
+
