@@ -10,6 +10,27 @@ The file [app.py](https://github.com/alessandroadamo/ml-template/blob/master/app
 
 In the file [model.py](https://github.com/alessandroadamo/ml-template/blob/master/app/model.py) is implemented a simple classifier that extends the classes *BaseEstimator* and *ClassifierMixin* of [scikit-learn](http://scikit-learn.org/stable) 
 
+## Update the requirements file
+
+The requirements [requirements.txt](https://github.com/alessandroadamo/ml-template/blob/master/requirements.txt) contains all the python dependencies of the project.
+To update the file it is required to enable the python environment end to execute the following commands in the shell
+
+```console
+foo@bar:~$ source ~/venv/bin/activate
+(venv) foo@bar:~$ pip freeze > requirements.txt
+```
+
+## Perform unit test
+
+In the directory [tests](https://github.com/alessandroadamo/ml-template/tree/master/tests) are contained unit tests classses for the models.
+
+To run tests you have to run the following code
+
+```console
+foo@bar:~$ python -m test/model.py -j0 
+```
+
+You can find more details at this [link](https://devguide.python.org/runtests/),
 
 ## Build the Docker image
 

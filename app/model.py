@@ -21,16 +21,15 @@ class MyClassifier(BaseEstimator, ClassifierMixin):
         """
         assert (type(self.intValue) == int), "intValue parameter must be integer"
         assert (type(self.stringParam) == str), "stringValue parameter must be string"
-        assert (len(X) == 20), "X must be list with numerical values."
 
-        self.treshold_ = (sum(X) / len(X)) + self.intValue  # mean + intValue
+        self.treshold_ = (sum(sum(X)) / len(X)) + self.intValue  # mean + intValue
 
         return self
 
     def _meaning(self, x):
         # returns True/False according to fitted classifier
         # notice underscore on the beginning
-        return (True if x >= self.treshold_ else False)
+        return (True if sum(x) >= self.treshold_ else False)
 
     def predict(self, X, y=None):
         try:
